@@ -1,0 +1,428 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    color: aliceblue;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul li {
+    list-style: none;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    min-width: 375px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 10;
+    transition: top 0.2s linear;
+    background-color: black;
+    opacity: 0.8;
+    position:sticky;
+}
+
+.logo {
+    width: 154px;
+}
+
+.header__flex {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu__list {
+    display: none;
+}
+
+.burger {
+    left: 10px;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+.burger__show {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin-top: 63px;
+}
+
+.burger__show li {
+    padding: 10px;
+    border-bottom: 1px solid white;
+}
+
+.burger__show li a{
+    color: white;
+    font-size: large;
+    text-decoration: none;
+}
+
+.burger,
+.burger::after,
+.burger::before {
+    display: block;
+    background-color: white;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.burger::before {
+    content: '';
+    margin-top: 8px;
+}
+
+.burger::after {
+    content: '';
+    margin-top: 16px;
+}
+
+
+.close {
+    margin-top: 25px;
+    opacity: 0.3;
+    cursor: pointer;
+}
+
+.close:before,
+.close:after {
+    position: absolute;
+    left: 20px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: white;
+}
+
+.close:before {
+    transform: rotate(45deg);
+}
+
+.close:after {
+    transform: rotate(-45deg);
+}
+
+main{
+    background-image: url(./img/back.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.main { 
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.about {
+    margin: 100px 10px 0;
+
+}
+
+.portrait {
+    margin: 50px 10px 100px 0;
+    width: 50vw;
+}
+
+.down {
+    display: none;
+}
+
+.stack {
+    margin-top: 70px;
+    max-width: 1000px;
+    margin-bottom: 70px;
+}
+
+.stack-list, .portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.stack-list__item, .portfolio-item {
+    max-width: 75px;
+    margin: 20px;
+    text-align: center;
+    color: #EEEEEE;
+}
+
+.stack-list__item img, .portfolio-item img {
+    width: 75px;
+}
+
+.item-logo {
+    padding-bottom: 10px;
+}
+
+.monstera {
+    background-image: url(./img/monstera.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+article {
+    padding-top: 70px;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.portfolio-item a {
+ text-decoration: none;
+ color: #EEEEEE;
+}
+
+.portfolio-item img {
+    border-radius: 10px;
+    box-shadow: 5px 5px 7px 5px #313e3a;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-weight: normal;
+}
+
+.contact-touch {
+    margin-top: 40px;
+}
+
+.olya {
+    max-width: 50vw;
+    border-radius: 30px;
+}
+.contact-desc .desc {
+    max-width: 155px;
+    padding-top: 20px;
+}
+
+.contact-desc {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    margin: 40px 0 0 0;
+}
+
+.contact a {
+    display: block;
+    margin-top: 25px;
+    color: #c4c4c4d0;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 60px 0 50px 0;
+}
+
+
+@media (min-width: 768px) {
+    .header {
+        position: fixed; 
+        left: 0; top: 0; 
+        width:100%;
+        z-index: 10;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .menu__list {
+        display: flex;
+        padding-top: 40px;
+    }
+
+    .menu__list li a {
+        color: white;
+        padding: 10px;
+        font-size: 20px;
+        margin-right: 35px;
+    }
+
+    .burger,
+    .burger::after,
+    .burger::before {
+        display: none;
+    }
+
+    .portrait {
+        width: 40vw;
+    }
+
+    .main {
+        justify-content: space-around;
+        margin-top: 125px;
+    }
+
+    .about {
+        margin: 200px 0 0 100px;
+    }
+
+    .desc {
+        margin:50px 0 0 0 ;
+        font-size: xx-large;
+        max-width: 400px;
+    }
+
+    .name {
+        font-size: 50px;
+    }
+
+    .down {
+        display: block;
+        text-align: center;
+    }
+
+    .item-logo {
+        padding-bottom: 25px;
+    }
+
+    .down img {
+        border: 1px solid white;
+        border-radius: 50%;
+        padding: 16px 24px;
+        margin-bottom: 50px;
+    }
+
+    .down img:hover {
+        opacity: 0.5;
+    }
+
+    .stack {
+        margin-top: 80px;
+    }
+
+    .logos {
+        margin-left: 40px;
+        font-size: xx-large;
+        border-bottom: 1px solid #eeee;
+    }
+
+    .stack-list__item, .portfolio-item {
+        max-width: 245px;
+        margin: 35px;
+        font-size: xx-large;
+        margin-bottom: 100px;
+        margin-right: 0px;
+        width: 100%;
+    }
+
+    .portfolio-item {
+        margin-bottom: 40px;
+    }
+
+    .stack-list__item img, .portfolio-item img{
+        width: 200px;
+    }
+
+    h3 {
+        max-width: 200px;
+    }
+
+    .portfolio-item img {
+        box-shadow: 10px 10px 10px 10px #313e3a;
+    }
+
+    .polygraphy {
+        flex-wrap: nowrap;
+        padding-bottom: 100px;
+    }
+
+    .contact {
+        margin: 100px 40px;
+    }
+    
+    .contact-touch {
+        font-size: xx-large;
+        margin-bottom: 60px;
+    } 
+    
+    .contact-desc .desc {
+        max-width: 435px;
+    }
+    
+    .olya {
+        max-width: 465px;
+        border-radius: 70px;
+    }
+
+    .contact-desc .desc {
+        max-width: 435px;
+        padding-top: 20px;
+    }
+
+    .footer {
+        border-top: 1px solid;
+    }
+
+    .contact a:hover {
+        color: #eeee;
+    }  
+
+    .contact-item img{
+        margin: 20px 0 40px 0;
+        width: 55px;
+    }
+
+    .contact-item img:hover {
+        opacity: 0.7;
+    }
+
+    .telegram {
+        padding-top: 10px;
+    }
+}
+
+@media (min-width:990px) {
+    .menu__list li a {
+        font-size: 25px;
+        margin-right: 77px;
+    }
+
+    .menu__list li a :hover {
+        text-decoration: underline;
+    }
+
+    .logo {
+        right: -60px;
+        position: relative;
+        width: 240px;
+    }  
+
+    .portrait {
+        width: 30vw;
+    }
+}
